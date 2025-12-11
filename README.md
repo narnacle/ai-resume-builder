@@ -348,7 +348,7 @@ Thanks to these amazing people who have contributed to this project:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/yourusername"><img src="https://avatars.githubusercontent.com/u/youruserid?s=100" width="100px;" alt=""/><br /><sub><b>Your Name</b></sub></a><br />💻 📖 🎨</td>
+    <td align="center"><a href="https://github.com/narnacle"><img src="https://avatars.githubusercontent.com/u/91059545?s=100" width="100px;" alt=""/><br /><sub><b>Narnacle</b></sub></a><br />💻 📖 🎨</td>
   </tr>
 </table>
 <!-- markdownlint-restore -->
