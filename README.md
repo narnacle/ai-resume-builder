@@ -371,4 +371,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   <p>Made with ❤️ by the AI Résumé Builder Team</p>
   <p>If you find this project useful, please consider giving it a ⭐️</p>
 </div>
-```
