@@ -1,0 +1,38 @@
+{
+    "name": "ai-resume-builder",
+    "version": "1.0.0",
+    "description": "AI-powered resume builder with ATS optimization",
+    "main": "index.js",
+    "scripts": {
+      "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+      "start:backend": "cd backend && npm start",
+      "start:frontend": "cd frontend && npx http-server -p 3000",
+      "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+      "dev:backend": "cd backend && npm run dev",
+      "dev:frontend": "cd frontend && npx live-server --port=3000",
+      "install:all": "npm install && cd backend && npm install",
+      "test": "echo \"No tests specified\" && exit 0"
+    },
+    "keywords": [
+      "ai",
+      "resume",
+      "builder",
+      "ats",
+      "career",
+      "job",
+      "openai"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+      "concurrently": "^8.0.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yourusername/ai-resume-builder.git"
+    },
+    "bugs": {
+      "url": "https://github.com/yourusername/ai-resume-builder/issues"
+    },
+    "homepage": "https://github.com/yourusername/ai-resume-builder#readme"
+  }

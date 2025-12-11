@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Résumé Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-robot"></i> AI Résumé Builder</h1>
+            <p class="subtitle">Create professional, ATS-optimized résumés powered by AI</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Panel: Input Form -->
+            <div class="input-panel">
+                <div class="form-section">
+                    <h2><i class="fas fa-user"></i> Personal Information</h2>
+                    <div class="form-grid">
+                        <input type="text" id="name" placeholder="Full Name *" required>
+                        <input type="email" id="email" placeholder="Email *" required>
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <input type="text" id="location" placeholder="City, State">
+                        <input type="text" id="linkedin" placeholder="LinkedIn Profile URL">
+                        <input type="text" id="github" placeholder="GitHub Profile URL">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2><i class="fas fa-bullseye"></i> Professional Summary</h2>
+                    <textarea id="summary" rows="4" placeholder="Briefly describe your professional background, skills, and career objectives..."></textarea>
+                    <button class="ai-help-btn" onclick="suggestImprovements('summary')">
+                        <i class="fas fa-magic"></i> AI Suggestions
+                    </button>
+                </div>
+
+                <div class="form-section">
+                    <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                    <textarea id="experience" rows="6" placeholder="List your work experience (include job titles, companies, dates, and achievements)..."></textarea>
+                    <button class="ai-help-btn" onclick="suggestImprovements('experience')">
+                        <i class="fas fa-magic"></i> AI Suggestions
+                    </button>
+                </div>
+
+                <div class="form-section">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <textarea id="education" rows="4" placeholder="List your educational background..."></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h2><i class="fas fa-tools"></i> Skills</h2>
+                    <textarea id="skills" rows="4" placeholder="List your skills (separate with commas)..."></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h2><i class="fas fa-bullseye"></i> Target Job Description</h2>
+                    <textarea id="jobDescription" rows="5" placeholder="Paste the job description you're targeting for optimal AI customization..."></textarea>
+                </div>
+
+                <button id="generateBtn" onclick="generateResume()">
+                    <i class="fas fa-wand-magic-sparkles"></i> Generate AI-Powered Résumé
+                </button>
+            </div>
+
+            <!-- Right Panel: Output Display -->
+            <div class="output-panel">
+                <div class="output-header">
+                    <h2><i class="fas fa-file-alt"></i> Your AI-Optimized Résumé</h2>
+                    <div class="output-actions">
+                        <button id="copyBtn" onclick="copyToClipboard()">
+                            <i class="far fa-copy"></i> Copy
+                        </button>
+                        <button id="downloadBtn" onclick="downloadResume()">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="resume-output" id="resumeOutput">
+                    <div class="placeholder">
+                        <i class="fas fa-file-alt fa-3x"></i>
+                        <h3>Your AI-optimized résumé will appear here</h3>
+                        <p>Fill out the form and click "Generate" to create your personalized résumé</p>
+                    </div>
+                </div>
+
+                <!-- AI Suggestions Panel -->
+                <div class="suggestions-panel" id="suggestionsPanel" style="display: none;">
+                    <h3><i class="fas fa-lightbulb"></i> AI Suggestions</h3>
+                    <div id="suggestionsContent"></div>
+                    <button onclick="closeSuggestions()" class="close-btn">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+
+                <!-- ATS Optimization Tips -->
+                <div class="ats-tips">
+                    <h3><i class="fas fa-search"></i> ATS Optimization Tips</h3>
+                    <div id="atsTips">
+                        <p>Tips will appear here after generation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="spinner"></div>
+            <p>AI is crafting your perfect résumé...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
